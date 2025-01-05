@@ -1,0 +1,73 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Updated to include Roboto */
+    padding: 20px;
+    background-color: #F4F4F4; /* Light gray background from Cox theme */
+    color: #333333; /* Dark gray text */
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a modern look */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs and Dropdowns */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #CCCCCC; /* Light border */
+    border-radius: 4px; /* Subtle rounding */
+    font-size: 1rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Slight inset shadow */
+}
+
+/* Buttons */
+button {
+    background-color: #0075C9; /* Cox blue */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Results Section */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #A5CD39; /* Cox green */
+    color: #FFFFFF; /* White text */
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    margin: 0 auto 20px; /* Center the logo with spacing below */
+    max-width: 200px; /* Limit logo size */
+}

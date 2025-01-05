@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Prices vs. Cox Contour Tv</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <img src="cox-logo.png" alt="Cox Logo">
+    </div>
+           
+    <div class="container">
+        <h1>Streaming Prices vs. Cox Contour Tv</h1>
+    
+        <!-- Dropdowns for Streaming Services -->
+        <div class="form-group">
+            <label for="netflix">Netflix Plan:</label>
+            <select id="netflix">
+                <option value="0">None</option>
+                <option value="6.99">Standard with Ads - $6.99</option>
+                <option value="15.49">Standard - $15.49</option>
+                <option value="22.99">Premium - $22.99</option>
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="hulu">Hulu Plan:</label>
+            <select id="hulu">
+                <option value="0">None</option>
+                <option value="9.99">With Ads - $9.99</option>
+                <option value="18.99">No Ads - $18.99</option>
+                <option value="82.99">Live TV + Disney+ + ESPN+ - $82.99</option>
+                <option value="95.99">Live TV + Disney+ + ESPN+ (No Ads) - $95.99</option>
+                <option value="81.99">Live TV Only - $81.99</option>
+            </select>
+        </div>
+      
+        <div class="form-group">
+            <label for="paramountPlus">Paramount Plus:</label>
+            <select id="paramountPlus">
+                <option value="0">None</option>
+                <option value="5.99">Essential Plan - $5.99</option>
+                <option value="9.99">Premium Plan - $9.99</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="Peacock">Peacock:</label>
+            <select id="Peacock">
+                <option value="0">None</option>
+                <option value="7.99">Premium - $7.99</option>
+                <option value="13.99">Premium Plus - $13.99</option>
+                <!-- Add more plans as needed -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="Apple TV">Apple TV:</label>
+            <select id="Apple TV">
+                <option value="0">None</option>
+                <option value="9.99">Apple TV+ - $9.99</option>
+                <!-- Add more plans as needed -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="Fubo">Fubo:</label>
+            <select id="Fubo">
+                <option value="0">None</option>
+                <option value="79.99">Essential - 79.99</option>
+                <option value="79.99">Pro - 79.99</option>
+                <option value="89.99">Elite - $89.99</option>
+                <!-- Add more plans as needed -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Sling TV">Sling TV:</label>
+            <select id="Sling TV">
+                <option value="0">None</option>
+                <option value="79.99">Sling Orange - 46.00</option>
+                <option value="46.00">Sling Blue - 46.00</option>
+                <option value="61.00">Sling Orange + Blue - $61.00</option>
+                <!-- Add more plans as needed -->
+            </select>
+        </div>
+
+        <!-- Add more dropdowns for other services -->
+    
+        <!-- Internet and Cable -->
+        <div class="form-group">
+            <label for="internet">Internet Cost (Monthly):</label>
+            <input type="number" id="internet" placeholder="Enter internet cost">
+        </div>
+    
+        <div class="form-group">
+            <label for="cable">Cox Cable TV Plan:</label>
+            <select id="cable">
+                <option value="0">None</option>
+                <option value="71">Contour Starter - $71</option>
+                <option value="125">Contour Preferred - $125</option>
+                <option value="162">Contour Ultimate - $162</option>
+            </select>
+        </div>
+    
+        <button onclick="calculateCosts()">Compare Costs</button>
+    
+        <div class="result" id="result" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -68,8 +68,8 @@ button:active {
 .result {
     margin-top: 20px;
     padding: 15px;
-    background-color: var(--secondary-color, #A5CD39); /* Cox green */
-    color: #FFFFFF; /* White text */
+    background-color: var(--secondary-color, #ffffffff); /* White Background */
+    color: #000000; /* Black text */
     border-radius: 5px;
     font-size: 1.1rem; /* Slightly larger font for emphasis */
     text-align: center;

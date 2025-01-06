@@ -3,7 +3,10 @@ const streamingServices = [
     { id: "netflix", name: "Netflix" },
     { id: "hulu", name: "Hulu" },
     { id: "paramountPlus", name: "Paramount Plus" },
-    { id: "peacock", name: "Peacock" }
+    { id: "peacock", name: "Peacock" },
+    { id: "appleTV", name: "Apple TV" },
+    { id: "fubo", name: "Fubo" },
+    { id: "slingTV", name: "Sling TV" }
 ];
 
 // Function to calculate costs
@@ -28,6 +31,12 @@ function calculateCosts() {
 
     console.log("Internet Cost:", internet);
     console.log("Cable Cost:", cable);
+
+    // Validate inputs
+    if (totalStreaming === 0 && internet === 0 && cable === 0) {
+        alert("Please select at least one streaming service, enter an internet cost, or choose a cable plan.");
+        return; // Stop execution if validation fails
+    }
 
     // Final totals
     const finalStreamingCost = totalStreaming + internet;

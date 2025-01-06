@@ -3,21 +3,31 @@ const streamingServices = [
     { id: "netflix", name: "Netflix" },
     { id: "hulu", name: "Hulu" },
     { id: "paramountPlus", name: "Paramount Plus" },
-    { id: "Peacock", name: "Peacock"}, 
-    // Add new services here as { id: "dropdownID", name: "Service Name" }
+    { id: "peacock", name: "Peacock" }
 ];
 
 // Function to calculate costs
 function calculateCosts() {
+    console.log("Calculating costs...");
+
     // Calculate total streaming cost
     const totalStreaming = streamingServices.reduce((total, service) => {
-        const cost = parseFloat(document.getElementById(service.id)?.value) || 0;
+        const element = document.getElementById(service.id);
+        if (!element) {
+            console.warn(`Element with ID ${service.id} not found.`);
+            return total;
+        }
+        const cost = parseFloat(element.value) || 0;
+        console.log(`${service.name} Cost:`, cost);
         return total + cost;
     }, 0);
 
     // Fetch internet and cable costs
     const internet = parseFloat(document.getElementById("internet").value) || 0;
     const cable = parseFloat(document.getElementById("cable").value) || 0;
+
+    console.log("Internet Cost:", internet);
+    console.log("Cable Cost:", cable);
 
     // Final totals
     const finalStreamingCost = totalStreaming + internet;

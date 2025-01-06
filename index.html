@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming Prices vs. Cox Contour Tv</title>
+    <title>Streaming Prices vs. Cox Contour TV</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="logo">
-        <img src="cox-logo.png" alt="Cox Logo">
+        <img src="cox-logo.png" alt="Cox Communications Logo">
     </div>
            
     <div class="container">
-        <h1>Streaming Prices vs. Cox Contour Tv</h1>
+        <h1>Streaming Prices vs. Cox Contour TV</h1>
     
         <!-- Dropdowns for Streaming Services -->
         <div class="form-group">
@@ -53,42 +53,35 @@
                 <option value="0">None</option>
                 <option value="7.99">Premium - $7.99</option>
                 <option value="13.99">Premium Plus - $13.99</option>
-                <!-- Add more plans as needed -->
             </select>
         </div>
         
         <div class="form-group">
-            <label for="Apple TV">Apple TV:</label>
-            <select id="Apple TV">
+            <label for="appleTV">Apple TV:</label>
+            <select id="appleTV">
                 <option value="0">None</option>
                 <option value="9.99">Apple TV+ - $9.99</option>
-                <!-- Add more plans as needed -->
             </select>
         </div>
         
         <div class="form-group">
-            <label for="Fubo">Fubo:</label>
-            <select id="Fubo">
+            <label for="fubo">Fubo:</label>
+            <select id="fubo">
                 <option value="0">None</option>
-                <option value="79.99">Essential - 79.99</option>
-                <option value="79.99">Pro - 79.99</option>
+                <option value="79.99">Essential - $79.99</option>
                 <option value="89.99">Elite - $89.99</option>
-                <!-- Add more plans as needed -->
             </select>
         </div>
 
         <div class="form-group">
-            <label for="Sling TV">Sling TV:</label>
-            <select id="Sling TV">
+            <label for="slingTV">Sling TV:</label>
+            <select id="slingTV">
                 <option value="0">None</option>
-                <option value="79.99">Sling Orange - 46.00</option>
-                <option value="46.00">Sling Blue - 46.00</option>
+                <option value="46.00">Sling Orange - $46.00</option>
+                <option value="46.00">Sling Blue - $46.00</option>
                 <option value="61.00">Sling Orange + Blue - $61.00</option>
-                <!-- Add more plans as needed -->
             </select>
         </div>
-
-        <!-- Add more dropdowns for other services -->
     
         <!-- Internet and Cable -->
         <div class="form-group">
@@ -106,7 +99,7 @@
             </select>
         </div>
     
-        <button onclick="calculateCosts()">Compare Costs</button>
+        <button type="button" onclick="calculateCosts()">Compare Costs</button>
     
         <div class="result" id="result" style="display: none;"></div>
     </div>

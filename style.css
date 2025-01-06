@@ -2,8 +2,8 @@
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Updated to include Roboto */
     padding: 20px;
-    background-color: #F4F4F4; /* Light gray background from Cox theme */
-    color: #333333; /* Dark gray text */
+    background-color: var(--background-color, #F4F4F4); /* Light gray background from Cox theme */
+    color: var(--text-color, #333333); /* Dark gray text */
 }
 
 /* Main Container */
@@ -24,6 +24,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 /* Inputs and Dropdowns */
@@ -35,11 +36,17 @@ input, select {
     border-radius: 4px; /* Subtle rounding */
     font-size: 1rem;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Slight inset shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:hover, select:hover, input:focus, select:focus {
+    border-color: var(--primary-color, #0075C9); /* Highlighted border color */
+    box-shadow: 0 0 4px rgba(0, 117, 201, 0.5); /* Subtle glow effect */
+    outline: none;
 }
 
 /* Buttons */
 button {
-    background-color: #0075C9; /* Cox blue */
+    background-color: var(--primary-color, #0075C9); /* Cox blue */
     color: #FFFFFF; /* White text */
     border: none;
     padding: 10px 15px;
@@ -47,22 +54,27 @@ button {
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 button:hover {
-    background-color: #0056b3; /* Darker blue for hover */
+    background-color: var(--primary-hover, #0056b3); /* Darker blue for hover */
+}
+button:active {
+    transform: scale(0.98); /* Slight shrink effect */
+    background-color: #004080; /* Even darker blue */
 }
 
 /* Results Section */
 .result {
     margin-top: 20px;
     padding: 15px;
-    background-color: #A5CD39; /* Cox green */
+    background-color: var(--secondary-color, #A5CD39); /* Cox green */
     color: #FFFFFF; /* White text */
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Slightly larger font for emphasis */
     text-align: center;
     font-weight: bold;
+    line-height: 1.5; /* Improve readability */
 }
 
 /* Logo */
@@ -70,4 +82,18 @@ button:hover {
     display: block;
     margin: 0 auto 20px; /* Center the logo with spacing below */
     max-width: 200px; /* Limit logo size */
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }

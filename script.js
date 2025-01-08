@@ -6,7 +6,8 @@ const streamingServices = [
     { id: "peacock", name: "Peacock" },
     { id: "appleTV", name: "Apple TV" },
     { id: "fubo", name: "Fubo" },
-    { id: "slingTV", name: "Sling TV" }
+    { id: "slingTV", name: "Sling TV" },
+    { id: "youtubeTV", name: "Youtube TV" },
 ];
 
 // Function to calculate costs

@@ -10,28 +10,30 @@ const streamingServices = [
     { id: "youtubeTV", name: "Youtube TV" },
 ];
 
-// Function to calculate costs
 function calculateCosts() {
     console.log("Calculating costs...");
 
     // Calculate total streaming cost
     const totalStreaming = streamingServices.reduce((total, service) => {
         const element = document.getElementById(service.id);
+        console.log(`Processing service: ${service.name}`); // Debug each service
         if (!element) {
             console.warn(`Element with ID ${service.id} not found.`);
             return total;
         }
         const cost = parseFloat(element.value) || 0;
-        console.log(`${service.name} Cost:`, cost);
+        console.log(`${service.name} selected value:`, cost); // Debug selected value
         return total + cost;
     }, 0);
+
+    console.log("Total Streaming Cost:", totalStreaming); // Debug total streaming cost
 
     // Fetch internet and cable costs
     const internet = parseFloat(document.getElementById("internet").value) || 0;
     const cable = parseFloat(document.getElementById("cable").value) || 0;
 
-    console.log("Internet Cost:", internet);
-    console.log("Cable Cost:", cable);
+    console.log("Internet Cost:", internet); // Debug internet cost
+    console.log("Cable Cost:", cable); // Debug cable cost
 
     // Validate inputs
     if (totalStreaming === 0 && internet === 0 && cable === 0) {

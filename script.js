@@ -11,6 +11,7 @@ const streamingServices = [
     { id: "directTV", name: "DirectTV" },
     { id: "ESPN+", name: "ESPN+" },
     { id: "starz", name: "Starz" },
+    { id: "max", name: "MAX" },
 ];
 
 function calculateCosts() {

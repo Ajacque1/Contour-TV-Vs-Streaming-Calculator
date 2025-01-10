@@ -9,6 +9,7 @@ const streamingServices = [
     { id: "slingTV", name: "Sling TV" },
     { id: "youtubeTV", name: "Youtube TV" },
     { id: "directTV", name: "DirectTV" },
+    { id: "ESPN+", name: "ESPN+" },
 ];
 
 function calculateCosts() {

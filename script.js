@@ -8,6 +8,7 @@ const streamingServices = [
     { id: "fubo", name: "Fubo" },
     { id: "slingTV", name: "Sling TV" },
     { id: "youtubeTV", name: "Youtube TV" },
+    { id: "directTV", name: "DirectTV" },
 ];
 
 function calculateCosts() {
